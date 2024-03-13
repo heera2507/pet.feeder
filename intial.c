@@ -1,5 +1,5 @@
 #include <Servo.h>
-int CatButton;  //  
+int CatSWTICH;  //  
 Servo servo1;   //  servo  Servo attached to arduino
 
 void setup() {
@@ -18,9 +18,9 @@ void setup() {
 
 void loop() {
 
-  CatButton = analogRead(A0); //      
+  CatSWTICH = analogRead(A0); //      
 
-  if (CatButton > 700) {      //       
+  if (CatSWTICH > 700) {      //       
     analogWrite(11, 20);      //     ()     
     digitalWrite(3, HIGH);    //    
     servo1.write((map(analogRead(A1), 0, 1024, 0, 180))); //    
